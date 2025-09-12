@@ -17,7 +17,7 @@ app.get ('/', (req, res) =>{
 })
 
 app.listen(port, () =>{
-    console.log('la app se está ejecutando')    //mensaje que muestra cuando se ejecuta
+    console.log('la app se está ejecutando 3000')    //mensaje que muestra cuando se ejecuta
 })
 
 
