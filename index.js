@@ -7,3 +7,15 @@ const server = http.createServer(function(req, res){
 
 });
 server.listen(5000);
+
+const express = require('express')
+const app = express()
+const port = 3000
+
+app.get ('/', (req, res) =>{
+    res.send('Hola')
+})
+
+app.listen(port, () =>{
+    console.log('la app se está ejecutando')
+})
