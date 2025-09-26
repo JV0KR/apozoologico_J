@@ -7,19 +7,15 @@
 //
 //});
 //server.listen(5000);
+//---------------------------------------------------------------------------------------------------------------------------------------------------------------
+app.get ('/', (req, res) =>{         
+    res.send('Hola')              //rutas como tal
+})
 
-//const express = require('express')
-//const app = express()
-//const port = 3000                 //el puerto que se va a poner en el navegador
-//
-//app.get ('/', (req, res) =>{         
-//    res.send('Hola')              //rutas como tal
-//})
-//
-//app.listen(port, () =>{
-//    console.log('la app se está ejecutando 3000')    //mensaje que muestra cuando se ejecuta
-//})
-//
+app.listen(port, () =>{
+    console.log('la app se está ejecutando 3000')    //mensaje que muestra cuando se ejecuta
+})
+//----------------------------------------------------------------------------------
 const parser = require("body-parser");
 const express = require('express');
 const app = express();
