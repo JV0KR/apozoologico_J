@@ -15,7 +15,8 @@
     "express": "^5.1.0",
     "mongodb": "^6.20.0",
     "mongoose": "^8.18.2",
-    "nodeman": "^1.1.2"
+    "nodeman": "^1.1.2",
+    "postman": "^0.2.0"
   },
   "devDependencies": {
     "nodemon": "^3.1.10"
