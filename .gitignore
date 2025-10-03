@@ -137,3 +137,17 @@ dist
 # Vite logs files
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
+
+
+#
+#Post ejemplo
+#{
+#  "nombre": "Firulais",
+#  "edad": 5,
+#  "tipo": "Perro",
+#  "fecha": "2025-10-02T12:00:00Z"
+#}
+#
+#instancias necesarias npm i nodemon --save
+#para correr npm run dev
+#
