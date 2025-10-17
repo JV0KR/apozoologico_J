@@ -32,7 +32,7 @@ router.put("/animals/:id", (req, res) => {
     const { nombre, edad, tipo, fecha } = req.body;
     animalSchema
          .updateOne({ _id: id }, {
-            $set: { nombre, edad, tipo, fecha }s
+            $set: { nombre, edad, tipo, fecha }
          })
          .then((data) => res.json(data))
          .catch((error) => res.json({ message: error }));
