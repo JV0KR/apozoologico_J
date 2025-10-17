@@ -11,21 +11,20 @@ router.post("/animals", (req, res) => {
 });
 module.exports = router;
 
+//trae todos los animales
 router.get("/animals", (req, res) => {
-    const { id } = req.params;
-    animalSchema
-        .findById(id)
+    animalSchema.find()
         .then((data) => res.json(data))
         .catch((error) => res.json({ message: error }));
 });
 
-//router.get("/animals/:id", (req, res) => {
-//     const { id } = req.params;
-//     animalSchema
-//        .findById(id)
-//         .then((data) => res.json(data))
-//         .catch((error) => res.json({ message: error }));
-//});
+router.get("/animals/:id", (req, res) => {
+     const { id } = req.params;
+     animalSchema
+         .findById(id)
+         .then((data) => res.json(data))
+         .catch((error) => res.json({ message: error }));
+});
 
 
 router.put("/animals/:id", (req, res) => {
@@ -33,7 +32,7 @@ router.put("/animals/:id", (req, res) => {
     const { nombre, edad, tipo, fecha } = req.body;
     animalSchema
          .updateOne({ _id: id }, {
-            $set: { nombre, edad, tipo, fecha }
+            $set: { nombre, edad, tipo, fecha }s
          })
          .then((data) => res.json(data))
          .catch((error) => res.json({ message: error }));
