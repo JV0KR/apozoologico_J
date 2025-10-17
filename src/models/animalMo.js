@@ -1,8 +1,10 @@
+const { text } = require("express");
 const mongoose = require("mongoose");
 const animalSchema = mongoose.Schema({
     nombre :{
         type: String,
         required: true,
+        text: true
     },
     edad: {
         type: Number,
@@ -11,7 +13,7 @@ const animalSchema = mongoose.Schema({
     },
     tipo: {
         type: String,
-        required: true,
+        required: true
 
     },
     fecha: {

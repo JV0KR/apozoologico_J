@@ -18,6 +18,13 @@ router.get("/animals", (req, res) => {
         .catch((error) => res.json({ message: error }));
 });
 
+router.get("/animals/tipo", (req, res) => {
+     //const { nombre } = req.params;
+     animalSchema.find({nombre: {$eq:"DevoradorDeMundos"}})
+         .then((data) => res.json(data))
+         .catch((error) => res.json({ message: error }));
+});
+
 router.get("/animals/:id", (req, res) => {
      const { id } = req.params;
      animalSchema
@@ -25,6 +32,7 @@ router.get("/animals/:id", (req, res) => {
          .then((data) => res.json(data))
          .catch((error) => res.json({ message: error }));
 });
+
 
 
 router.put("/animals/:id", (req, res) => {
@@ -49,4 +57,16 @@ router.delete("/animals/:id", (req, res) => {
         res.json({ message: error });
      });
 });
+
+//elimina a todos los valores que son menores a 39
+router.delete("/animals", (req, res) => {
+ animalSchema.find({edad:{$gt:100}})
+     .then((data) => {
+        res.json(data);
+     })
+     .catch((error) => {
+        res.json({ message: error });
+     });
+});
+
 
